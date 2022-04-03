@@ -1,0 +1,16 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+main{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+

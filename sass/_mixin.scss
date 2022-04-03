@@ -1,0 +1,161 @@
+// Responsive
+@mixin mobile {
+    @media (max-width: $mobileWidth){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $mobileWidth) and (max-width: $tabletWidth){
+        @content;
+    }
+}
+
+@mixin mobileAndTablet {
+    @media (max-width: $tabletWidth) {
+        @content;
+    }
+}
+
+@mixin laptopAndDesktop {
+    @media (min-width: $tabletWidth) {
+        @content;
+    }
+}
+
+@mixin smallLaptop {
+    @media (min-width: $tabletWidth) and (max-width: $desktopWidth){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktopWidth){
+        @content;
+    }
+}
+
+// Keyframe
+@keyframes gradually{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes showOn{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes lineGrow{
+    from{
+        width: 0;
+        left: 50%;
+    }
+    to{
+        width: 100%;
+        left: 0;
+    }
+}
+
+@mixin gradually($s) {
+    animation: gradually $s ease;   
+}
+
+@mixin lineGrow($s) {
+    animation: lineGrow $s ease;
+}
+
+@mixin subLine($height) {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: $Orange;
+    display: none;
+    height: $height;
+    @include lineGrow(0.4s);
+}
+
+@mixin showOn ($s) {
+    animation: showOn $s ease;
+}
+
+// Filter
+@mixin filter($zIndex) {
+    position: fixed;
+    inset: 0;
+    z-index: $zIndex;
+    background-color: $black07;
+    display: none;
+}
+
+@mixin closeBtn($fontSize, $color) {
+    display: block;
+    color: $color;
+    font-weight: 700;
+    font-size: $fontSize;
+    transition: 0.3s all ease;
+}
+
+//Button
+
+@mixin arrowBtn($width){
+    width: $width;
+    height: $width;
+    line-height: calc($width + 4px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $white;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+// Thumbnail
+
+@mixin thumb {
+    margin-top: 36px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 36px; 
+}
+
+@mixin thumbItem {
+    border-radius: 12px;
+    position: relative;
+    max-width: 93px;
+    max-height: 93px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@mixin thumbItemAfter($bgColorAlpha: 0.7) {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba($color: #fff, $alpha: $bgColorAlpha);
+    border: 2px solid $Orange;
+    border-radius: 12px;
+    display: none;
+    @include showOn(0.3s);
+}
+
+@mixin thumbImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}

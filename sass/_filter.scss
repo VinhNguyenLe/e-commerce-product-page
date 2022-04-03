@@ -1,0 +1,101 @@
+.filter{
+    @include filter(2);
+    @include gradually(0.5s);
+}
+
+.filter.show{
+    display: block;
+}
+
+.product-filter{
+    @include filter(10);
+    @include showOn(0.3s);
+    display: flex;
+    flex-direction: column;
+    padding: 2% 34%;
+    display: none;
+
+    &-close{
+        @include closeBtn(32px, $white);
+        text-align: right;
+        margin-bottom: 12px;
+        & i{
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        & i:hover{
+            color: $Orange;
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.product-filter.show{
+    display: block;
+}
+
+.product-filter-main{
+    position: relative;
+}
+
+.product-filter-slide{
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    
+    &-inner{
+        width: 100%;
+        display: flex;
+        transition: transform 0.3s ease;
+    }
+    &-item{
+        width: 100%;
+        flex: 1 0 100%;
+        border-radius: 16px;
+        overflow: hidden;
+
+        & img{
+            overflow: hidden;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
+}
+
+.product-filter-prev-btn, .product-filter-next-btn{
+    @include arrowBtn(54px);
+    z-index: 11;
+}
+
+.product-filter-prev-btn{
+    left: -27px;
+}
+
+.product-filter-next-btn{
+    right: -27px;
+}
+
+.product-filter-thumb{
+    @include thumb;
+    &-item{
+        @include thumbItem;
+        &::after{
+            @include thumbItemAfter(0.5);
+        }
+        & img{
+            @include thumbImg;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }   
+    }
+
+}
+
+.active.product-filter-thumb-item::after{
+    display: block;
+}
+

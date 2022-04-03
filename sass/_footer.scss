@@ -1,0 +1,28 @@
+footer{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+    padding: 0 24px;
+    color: $varkBlue;
+
+    & a{
+        text-decoration: none;
+        color: $varkBlue;
+        position: relative;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: $Orange;
+        }
+
+        &::after{
+            @include subLine(2px);
+        }
+    }
+
+    & a:hover::after{
+        display: block;
+    }
+
+}

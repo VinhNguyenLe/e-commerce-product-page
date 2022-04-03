@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./sass/style.css">
+</head>
+<body>
+    <main class="wrap">
+        <!-- Header -->
+        <header class="header">
+            <!-- Header left -->
+            <div class="header-part">
+                <div class="header-btn">
+                    <img src="./images/icon-menu.svg" alt="">
+                </div>
+                <div class="header-logo">
+                    <img src="./images/logo.svg" alt="">
+                </div>
+                <div class="header-menu">
+                    <div class="header-menu-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="header-menu-item">
+                        <a href="#">Collections</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a href="#">Men</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a href="#">Women</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a href="#">About</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Header right -->
+            <div class="header-part">
+                <div class="header-cart">
+                    <img src="./images/icon-cart.svg" alt="">
+                    <span class="number-of-product"></span>
+                </div>
+                <div class="header-avt">
+                    <img src="./images/image-avatar.png" alt="">
+                </div>
+            </div>
+        </header>
+        <!-- Body -->
+        <section class="section">
+            <!-- Left -->
+            <div class="section-item">
+                <div class="product-main">
+                    <div class="product-prev-btn hide">
+                        <img src="./images/icon-previous.svg" alt="">
+                    </div>
+                    <div class="product-next-btn">
+                        <img src="./images/icon-next.svg" alt="">
+                    </div>
+                    <div class="product-slide">
+                        <div class="slider">
+                            <div class="product-slide-item">
+                                <img src="./images/image-product-1.jpg" alt="Product">
+                            </div> 
+                            <div class="product-slide-item">
+                                <img src="./images/image-product-2.jpg" alt="Product">
+                            </div> 
+                            <div class="product-slide-item">
+                                <img src="./images/image-product-3.jpg" alt="Product">
+                            </div> 
+                            <div class="product-slide-item">
+                                <img src="./images/image-product-4.jpg" alt="Product">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="product-thumb">
+                    <div class="product-thumb-item active">
+                        <img src="./images/image-product-1-thumbnail.jpg" data-index="0" alt="Thumb">
+                    </div>
+                    <div class="product-thumb-item">
+                        <img src="./images/image-product-2-thumbnail.jpg" data-index="1" alt="Thumb">
+                    </div>
+                    <div class="product-thumb-item">
+                        <img src="./images/image-product-3-thumbnail.jpg" data-index="2" alt="Thumb">
+                    </div>
+                    <div class="product-thumb-item">
+                        <img src="./images/image-product-4-thumbnail.jpg" data-index="3" alt="Thumb">
+                    </div>
+                </div>
+            </div>
+            <!-- Right -->
+            <div class="section-item">
+                <div class="section-title">
+                    Sneaker Company
+                </div>
+                <div class="section-name">
+                    Fall Limited Edition Sneakers
+                </div>
+                <div class="section-des">
+                    These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                    durable rubber outer sole, they’ll withstand everything the weather can offer.
+                </div>
+                <div class="price-wrap">
+                    <div class="section-new-price">
+                        <div class="section-price">
+                            $125.00
+                            <span>50%</span>
+                        </div>
+                    </div>
+                    <div class="section-old-price">$250.00</div>
+                </div>
+                <div class="section-form">
+                    <div class="select-number">
+                        <div class="minus">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="amount">0</div>
+                        <div class="plus">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="section-add-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Add to cart
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter -->
+        <section class="filter"></section>
+        <!-- Overlay -->
+        <section class="product-filter">
+            <div class="product-filter-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="product-filter-main">
+                <div class="product-filter-prev-btn">
+                    <img src="./images/icon-previous.svg" alt="">
+                </div>
+                <div class="product-filter-next-btn">
+                    <img src="./images/icon-next.svg" alt="">
+                </div>
+                <div class="product-filter-slide">
+                    <div class="product-filter-slide-inner">
+                        <div class="product-filter-slide-item">
+                            <img src="./images/image-product-1.jpg" alt="Product">
+                        </div> 
+                        <div class="product-filter-slide-item">
+                            <img src="./images/image-product-2.jpg" alt="Product">
+                        </div> 
+                        <div class="product-filter-slide-item">
+                            <img src="./images/image-product-3.jpg" alt="Product">
+                        </div> 
+                        <div class="product-filter-slide-item">
+                            <img src="./images/image-product-4.jpg" alt="Product">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="product-filter-thumb">
+                <div class="product-filter-thumb-item">
+                    <img src="./images/image-product-1-thumbnail.jpg" data-index="0" alt="Thumb">
+                </div>
+                <div class="product-filter-thumb-item">
+                    <img src="./images/image-product-2-thumbnail.jpg" data-index="1" alt="Thumb">
+                </div>
+                <div class="product-filter-thumb-item">
+                    <img src="./images/image-product-3-thumbnail.jpg" data-index="2" alt="Thumb">
+                </div>
+                <div class="product-filter-thumb-item">
+                    <img src="./images/image-product-4-thumbnail.jpg" data-index="3" alt="Thumb">
+                </div>
+            </div>
+        </section>
+        <!-- Cart section -->
+        <section class="cart">
+            <div class="cart-title">Cart</div>
+            <div class="cart-body">
+                <div class="empty show ">Your cart is empty.</div>
+                <div class="cart-product ">
+                    <div class="cart-img">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="cart-text">
+                        <div class="cart-name">Autumn Limited Edition Sneakers</div>
+                        <div class="cart-price">$125.00 x <span class="mul">1</span> <span class="total">$125.00</span></div>
+                    </div>
+                    <div class="cart-delete">
+                        <img src="./images/icon-delete.svg" alt="">
+                    </div>
+                </div>
+    
+                <div class="cart-button ">Checkout</div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://www.frontendmentor.io/profile/VinhNguyenLe" target="_blank">Nguyen Le Vinh</a>.
+        </footer>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>
