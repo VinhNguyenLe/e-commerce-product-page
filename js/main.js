@@ -198,6 +198,7 @@ cartRemove.addEventListener('click', (e) => {
 
 cartButton.addEventListener('click', (e => {
     alert(`You bill is $${125 * amountIndex}! ^^`)
+    numberOfProduct.innerText = ``
     addEmpty()
 }))
 function start(){
